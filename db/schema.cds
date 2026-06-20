@@ -1,12 +1,11 @@
 namespace incident_management;
 
-aspect managed
+using
 {
-    createdAt : DateTime;
-    createdBy : LargeString;
-    modifiedAt : DateTime;
-    modifiedBy : LargeString;
+    managed,
+    sap.common.CodeList
 }
+from '@sap/cds/common';
 
 entity Conversations : managed
 {
@@ -25,7 +24,8 @@ entity Customers : managed
     email : String(100);
     firstName : String(100);
     lastName : String(100);
-    phone : String(100);
+    phone : String(100)
+        @Core.Computed;
     incidents : Association to many Incidents on incidents.customer = $self;
 }
 
@@ -47,23 +47,6 @@ entity Status : CodeList
     key code : StatusCode;
     criticality : Integer;
     incident : Association to one Incidents;
-}
-
-aspect temporal
-{
-    validFrom : DateTime;
-    validTo : DateTime;
-}
-
-aspect CodeList
-{
-    name : String(100);
-    descr : String(100);
-}
-
-aspect extensible
-{
-    extensions__ : String(100);
 }
 
 entity Urgency : CodeList

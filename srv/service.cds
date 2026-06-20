@@ -13,7 +13,8 @@ service ProcessorService
     entity Customers as
         projection on my.Customers
         {
-            *
+            *,
+            firstName || ' ' || lastName as name : String
         };
 
     @cds.redirection.target
