@@ -18,7 +18,6 @@ service ProcessorService
         };
 
     @cds.redirection.target
-    @odata.draft.enabled
     entity Conversations as
         projection on my.Conversations;
 

@@ -1,4 +1,4 @@
-name;descr;code;incident_ID
-;low;L;
-;medium;M;
-;high;H;
+name;descr;code
+;low;L
+;medium;M
+;high;H

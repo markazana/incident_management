@@ -1,7 +1,7 @@
-name;descr;ID;code;criticality;incident_ID
-;new;8ded93c4-8838-4b2d-9a4d-7b2370701b55;N;3;
-;assigned;1f438c23-62f4-45a5-a39f-99e699e913e3;A;2;
-;in_process;148f00e7-da57-432b-8e5f-02c2c5e50c0b;I;2;
-;on_hold;4ac597fb-9329-4d4d-9ae2-c57803de2942;H;3;
-;resolved;6eca0c31-e867-402c-9d56-7f234f1e437b;R;2;
-;closed;a2d4421a-8ee2-498c-9755-e8da6a963540;C;4;
+name;descr;code;criticality
+;new;N;3
+;assigned;A;2
+;in_process;I;2
+;on_hold;H;3
+;resolved;R;2
+;closed;C;4

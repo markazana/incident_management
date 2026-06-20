@@ -37,22 +37,19 @@ entity Incidents : managed
         @title : '';
     customer : Association to one Customers;
     conversations : Composition of many Conversations on conversations.incident = $self;
-    status : Association to one Status on status.incident = $self;
-    urgency : Association to one Urgency on urgency.incident = $self;
+    status : Association to one Status;
+    urgency : Association to one Urgency;
 }
 
 entity Status : CodeList
 {
-    key ID : UUID;
     key code : StatusCode;
     criticality : Integer;
-    incident : Association to one Incidents;
 }
 
 entity Urgency : CodeList
 {
     key code : UrgencyCode;
-    incident : Association to one Incidents;
 }
 
 type StatusCode : String enum
