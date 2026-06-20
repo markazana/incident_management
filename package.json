@@ -1,0 +1,24 @@
+{
+	"name": "incident_management",
+	"version": "1.0.0",
+	"dependencies": {
+		"@cap-js/hana": "^2",
+		"@sap/cds": "^9.9.1",
+		"@sap/xssec": "^4"
+	},
+	"devDependencies": {
+		"@cap-js/sqlite": "^2.4",
+		"@sap/dev-cap-tools": "^1.31.0"
+	},
+	"scripts": {
+		"start": "cds-serve"
+	},
+	"private": true,
+	"cds": {
+		"requires": {
+			"[production]": {
+				"auth": "xsuaa"
+			}
+		}
+	}
+}
