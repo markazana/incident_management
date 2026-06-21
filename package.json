@@ -1,24 +1,35 @@
 {
-	"name": "incident_management",
-	"version": "1.0.0",
-	"dependencies": {
-		"@cap-js/hana": "^2",
-		"@sap/cds": "^9.9.1",
-		"@sap/xssec": "^4"
-	},
-	"devDependencies": {
-		"@cap-js/sqlite": "^2.4",
-		"@sap/dev-cap-tools": "^1.31.0"
-	},
-	"scripts": {
-		"start": "cds-serve"
-	},
-	"private": true,
-	"cds": {
-		"requires": {
-			"[production]": {
-				"auth": "xsuaa"
-			}
-		}
-	}
+  "name": "incident_management",
+  "version": "1.0.0",
+  "dependencies": {
+    "@cap-js/hana": "^2",
+    "@sap/cds": "^9.9.1",
+    "@sap/xssec": "^4"
+  },
+  "devDependencies": {
+    "@cap-js/sqlite": "^2.4",
+    "@sap/cds-dk": "^9",
+    "@sap/dev-cap-tools": "^1.31.0",
+    "@sapui5/types": "^1.149.0",
+    "cds-plugin-ui5": "^0.17.0",
+    "typescript": "^6.0.3"
+  },
+  "scripts": {
+    "start": "cds-serve",
+    "watch-incidents_app": "cds watch --open namespace1.incidentsapp/index.html?sap-ui-xx-viewCache=false --livereload false"
+  },
+  "private": true,
+  "cds": {
+    "requires": {
+      "[production]": {
+        "auth": "xsuaa"
+      }
+    }
+  },
+  "workspaces": [
+    "app/*"
+  ],
+  "sapux": [
+    "app/incidents_app"
+  ]
 }

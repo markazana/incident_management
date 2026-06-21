@@ -70,6 +70,27 @@
       "options": {
         "cwd": "${workspaceFolder}"
       }
+    },
+    {
+      "type": "build.mta",
+      "label": "Build ",
+      "taskType": "Build",
+      "projectPath": "/home/user/projects/incident_management",
+      "extensions": []
+    },
+    {
+      "type": "deploy.mta.cf",
+      "label": "Deploy to Cloud Foundry ",
+      "taskType": "Deploy",
+      "mtarPath": "/home/user/projects/incident_management/mta_archives/incident_management_0.0.1.mtar",
+      "extensions": [],
+      "dependsOn": [
+        "Build "
+      ],
+      "cfTarget": "b19f2ac7trial_ttq068bskvv8s258",
+      "cfEndpoint": "https://api.cf.us10-001.hana.ondemand.com",
+      "cfOrg": "b19f2ac7trial_ttq068bskvv8s258",
+      "cfSpace": "incident_management"
     }
   ]
 }
