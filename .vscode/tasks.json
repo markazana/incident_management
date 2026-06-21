@@ -82,7 +82,7 @@
       "type": "deploy.mta.cf",
       "label": "Deploy to Cloud Foundry ",
       "taskType": "Deploy",
-      "mtarPath": "/home/user/projects/incident_management/mta_archives/incident_management_0.0.1.mtar",
+      "mtarPath": "/home/user/projects/incident_management/mta_archives/incident_management_1.0.0.mtar",
       "extensions": [],
       "dependsOn": [
         "Build "
